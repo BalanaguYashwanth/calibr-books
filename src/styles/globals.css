@@ -1,0 +1,36 @@
+:root {
+  /* clors */
+  --clr-grey:grey;
+  --clr-green:green;
+
+  /* font size */
+  --fs-medium:1rem
+
+  /* width */
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}

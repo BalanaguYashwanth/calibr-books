@@ -1,0 +1,20 @@
+.container {
+
+    .headline {
+        text-align: center;
+        margin: 10px;
+    }
+
+    .cards {
+        text-align: center;
+        text-transform: capitalize;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        align-items: center;
+        justify-items: center;
+        :hover{
+            color: var( --clr-green);
+        }
+    }
+
+}
