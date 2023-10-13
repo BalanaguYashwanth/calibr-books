@@ -1,7 +1,7 @@
 import { ShortTitleProps } from "./types";
 
 export const getRandomImage = () => {
-  return "https://source.unsplash.com/1600x900/?booklovers";
+  return "https://www.mswordcoverpages.com/wp-content/uploads/2018/10/Book-cover-page-3-CRC.png";
 };
 
 export const shortTitle = ({ title, limit }: ShortTitleProps) => {

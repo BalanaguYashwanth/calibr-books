@@ -12,7 +12,7 @@ const Card = ({ title }: BookProps) => {
           src={getRandomImage()}
           alt={`${title} cover`}
           height={300}
-          width={150}
+          width={175}
         />
         <p> {shortTitle({ title, limit: 15 })} </p>
       </section>
