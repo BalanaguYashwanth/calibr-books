@@ -6,24 +6,38 @@ import { searchBooks } from "@/utils/action.api";
 import Card from "@/components/Card";
 import { BookProps } from "@/utils/types";
 import { CONTENTS } from "@/utils/constants";
+import toast, { Toaster } from "react-hot-toast";
 
 const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
+  const [searchInput, setSearchInput] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const onInputChange = async (text: string) => {
-    const response = await searchBooks(text);
-    setSearchResults(response?.data?.response || []);
+    try {
+      setLoading(true);
+      setSearchInput(text);
+      setSearchResults([]);
+      const response = await searchBooks(text);
+      setSearchResults(response?.data?.response || []);
+    } catch (error) {
+      const typeError = error as Error;
+      toast.error(typeError?.message || CONTENTS.SOMETHING_WENT_WRONG);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <main className={styles.container}>
+      <Toaster />
       <section>
         <h1>{CONTENTS.SEARCH}</h1>
       </section>
       <section>
         <SearchBar onInputChange={onInputChange} />
       </section>
-      {searchResults.length > 0 && (
+      {searchResults.length > 0 ? (
         <section className={styles.grid}>
           {searchResults?.map((item: BookProps, index) => (
             <Card
@@ -32,7 +46,12 @@ const Search = () => {
             />
           ))}
         </section>
+      ) : (
+        <section>
+          {!loading && searchInput && <p>{CONTENTS.NO_RESULT_FOUND}</p>}
+        </section>
       )}
+      {loading && <p>{CONTENTS.LOADING}</p>}
     </main>
   );
 };

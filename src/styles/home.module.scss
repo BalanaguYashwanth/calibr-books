@@ -2,6 +2,24 @@
 
 .container {
 
+    .horizontalCenter {
+        position: relative;
+
+        .alignEnd {
+            font-size: 70%;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            bottom: 5px;
+            border: 1px solid var(--clr-orange);
+            background-color: var(--clr-orange);
+            color: var(--clr-white);
+            border-radius: 10px;
+            padding: 2px;
+        }
+    }
+
     .headline {
         text-align: center;
         margin: 10px;
