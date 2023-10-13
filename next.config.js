@@ -7,7 +7,8 @@ module.exports = {
   },
   images:{
     domains:[
-      'www.mswordcoverpages.com'
+      'www.mswordcoverpages.com',
+      'raw.githubusercontent.com'
     ]
   }
 };

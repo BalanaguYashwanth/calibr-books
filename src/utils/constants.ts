@@ -10,3 +10,5 @@ export const CONTENTS = {
   SOMETHING_WENT_WRONG: "something went wrong please try again",
   SEARCH_PLACEHOLDER: "Please search books like 'book job or book' etc ",
 };
+export const LOADER =
+  "https://raw.githubusercontent.com/rcwbr/react-ring-spinner/master/docs/example-spinner.gif";

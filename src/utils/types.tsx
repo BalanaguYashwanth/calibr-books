@@ -16,11 +16,16 @@ export interface SearchBarProps {
   onInputChange: (text: string) => Promise<void>;
 }
 
-export interface RootLayoutProps{
-  children: React.ReactNode
+export interface RootLayoutProps {
+  children: React.ReactNode;
 }
 
-export interface ShortTitleProps{
+export interface ShortTitleProps {
   title: string;
+  limit: number;
+}
+
+export interface FetchAllBooksProps {
+  skip: number;
   limit: number;
 }
