@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import Link from "next/link";
 import { BookProps } from "@/utils/types";
 import Card from "@/components/Card";
 import { fetchAllBooks } from "@/utils/action.api";
@@ -51,7 +52,10 @@ const Home = () => {
     <main className={styles.container}>
       <Toaster />
       <section className={styles.horizontalCenter}>
-        <a className={styles.alignEnd} href="/search">{CONTENTS.SEARCH}{" -> "}</a>
+        <Link className={styles.alignEnd} href="/search">
+          {CONTENTS.SEARCH}
+          {" -> "}
+        </Link>
         <h1 className={styles.headline}>{CONTENTS.BOOK_LIST}</h1>
       </section>
       <section className={styles.cards}>
