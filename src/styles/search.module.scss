@@ -3,7 +3,7 @@
 .container {
     flex-direction: column;
     @include center;
-
+    width: 100%;
     .grid {
         height: 400px;
         overflow: auto;

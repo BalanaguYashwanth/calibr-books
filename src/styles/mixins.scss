@@ -16,6 +16,10 @@
     :hover {
         color: var(--clr-orange);
     }
+
+    @media (max-width:50em) {
+        grid-template-columns: auto auto;
+    }
 }
 
 @mixin scrollStyles {

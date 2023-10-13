@@ -34,9 +34,7 @@ const Search = () => {
       <section>
         <h1>{CONTENTS.SEARCH}</h1>
       </section>
-      <section>
         <SearchBar onInputChange={onInputChange} />
-      </section>
       {searchResults.length > 0 ? (
         <section className={styles.grid}>
           {searchResults?.map((item: BookProps, index) => (
