@@ -29,4 +29,8 @@
         @include bookCardsGrid
     }
 
+    .center {
+        @include center;
+    }
+
 }

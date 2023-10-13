@@ -83,7 +83,11 @@ const Home = () => {
           />
         </>
       ) : (
-        loader && <Image src={LOADER} alt="loader" width="100" height={"100"} />
+        loader && (
+          <section className={styles.center}>
+            <Image src={LOADER} alt="loader" width="100" height={"100"} />
+          </section>
+        )
       )}
     </main>
   );
