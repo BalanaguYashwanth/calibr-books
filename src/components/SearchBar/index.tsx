@@ -3,11 +3,20 @@ import { SearchBarProps } from "@/utils/types";
 import styles from "./SearchBar.module.scss";
 
 const SearchBar = ({ onInputChange }: SearchBarProps) => {
+  let handleTimeOut: string | number | NodeJS.Timeout | undefined;
+
+  const handleDebounce = (text: string) => {
+    clearTimeout(handleTimeOut);
+    handleTimeOut = setTimeout(() => {
+      onInputChange(text);
+    }, 1000);
+  };
+
   return (
     <main className={styles.container}>
       <input
         className={styles.inputStyles}
-        onChange={(e) => onInputChange(e?.target?.value)}
+        onChange={(e) => handleDebounce(e?.target?.value)}
       />
     </main>
   );
