@@ -4,3 +4,37 @@
     align-items: center;
     justify-content: center;
 }
+
+@mixin bookCardsGrid {
+    text-align: center;
+    text-transform: capitalize;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    align-items: center;
+    justify-items: center;
+
+    :hover {
+        color: var(--clr-green);
+    }
+}
+
+@mixin scrollStyles {
+
+    &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: var(--clr-white);
+    }
+
+    &::-webkit-scrollbar {
+        border-radius: 10px;
+        width: 5px;
+        background-color: var(--clr-white);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: var(--clr-grey);
+    }
+}

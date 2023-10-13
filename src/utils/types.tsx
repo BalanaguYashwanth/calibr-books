@@ -19,3 +19,8 @@ export interface SearchBarProps {
 export interface RootLayoutProps{
   children: React.ReactNode
 }
+
+export interface ShortTitleProps{
+  title: string;
+  limit: number;
+}

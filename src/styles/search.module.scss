@@ -3,4 +3,11 @@
 .container {
     flex-direction: column;
     @include center;
+
+    .grid {
+        height: 400px;
+        overflow: auto;
+        @include bookCardsGrid;
+        @include scrollStyles;
+    }
 }

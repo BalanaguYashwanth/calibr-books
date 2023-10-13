@@ -23,15 +23,16 @@ const Search = () => {
       <section>
         <SearchBar onInputChange={onInputChange} />
       </section>
-      <section>
-        {searchResults &&
-          searchResults?.map((item: BookProps, index) => (
+      {searchResults.length > 0 && (
+        <section className={styles.grid}>
+          {searchResults?.map((item: BookProps, index) => (
             <Card
               title={item["_source"]?.title as string}
               key={`searchbook-${index}`}
             />
           ))}
-      </section>
+        </section>
+      )}
     </main>
   );
 };
