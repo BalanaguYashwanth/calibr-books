@@ -51,7 +51,7 @@ const Home = () => {
     <main className={styles.container}>
       <Toaster />
       <section className={styles.horizontalCenter}>
-        <a className={styles.alignEnd} href="/search">{CONTENTS.SEARCH}{" ->"}</a>
+        <a className={styles.alignEnd} href="/search">{CONTENTS.SEARCH}{" -> "}</a>
         <h1 className={styles.headline}>{CONTENTS.BOOK_LIST}</h1>
       </section>
       <section className={styles.cards}>
